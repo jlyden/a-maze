@@ -1,6 +1,6 @@
 This is a lightly edited (so far) [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Running App
 
 First, run the development server:
 
@@ -12,7 +12,15 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Result at [http://localhost:3000](http://localhost:3000) in browser.
+
+## Context
+
+Working on building Mazes inspired by [Design Patterns](https://learning.oreilly.com/library/view/design-patterns-elements/0201633612/ch03.html) (Gamma, Helm, Johnson & Vlissides)
+
+My working [notes doc](https://powerschoolgroup.atlassian.net/wiki/spaces/~jlyden/pages/65066074970/Design+Patterns)
+
+## Getting Started
 
 ~~You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.~~
 

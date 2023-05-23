@@ -1,4 +1,5 @@
-import Image from 'next/image'
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -13,19 +14,29 @@ export default function Home() {
           height={100}
           priority
         />
-      <a
-          href="/original"
-          className="group rounded-lg border border-transparent px-3 py-2 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <p>
-            Original Home{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </p>
-        </a>
+      <Link
+        href="/maze"
+        className="group rounded-lg border border-transparent px-3 py-2 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+      >
+        <p>go to mazes{' '}
+          <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+            -&gt;
+          </span>
+        </p>
+      </Link>
+      <Link
+        href="/original"
+        className="group rounded-lg border border-transparent px-3 py-2 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <p>
+          original home{' '}
+          <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+            -&gt;
+          </span>
+        </p>
+      </Link>
     </main>
   );
 }
