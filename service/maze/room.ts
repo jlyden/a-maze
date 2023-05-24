@@ -1,21 +1,21 @@
 import { MapSite } from './map-site'
 
-import { Direction } from '../common/direction'
+import { Direction } from './enums/direction'
 
 export class Room extends MapSite {
-  private _roomNumber: number;
-  private _sides: [];
+  private roomNumber: number;
+  private sides: [];
 
   constructor(roomNumber: number) {
     super();
 
-    this._roomNumber = roomNumber;
-    this._sides = [];
+    this.roomNumber = roomNumber;
+    this.sides = [];
     // TODO: set sides?
   }
 
   enter(): void {
-    // TODO
+    alert('you are here!');
   }
 
   // TODO: Return type MapSize
