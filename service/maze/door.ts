@@ -1,7 +1,6 @@
 import { MapSite } from './map-site'
 
 export class Door extends MapSite {
-  // Note: roomNumber b/c Door does not need to know Room, only its reference
   private roomOneNumber: number;
   private roomTwoNumber: number;
   private isOpen: boolean;
@@ -20,16 +19,17 @@ export class Door extends MapSite {
       return;
     }
 
-    const currentRoomNumber = 0; // TODO: getUserCurrentLocation;
-    const otherSideRoomNumber = this.otherSideFrom(currentRoomNumber);
+    const userCurrentLocation = 0; // TODO: getUserCurrentLocation()
+    const otherSideRoomNumber = this.otherSideFrom(userCurrentLocation);
     var alertMessage = '';
     if (otherSideRoomNumber) {
       alertMessage = `passed through door to ${otherSideRoomNumber}`;
       // TODO: actually go through door
     } else {
-      alertMessage = `you can't use this door from ${currentRoomNumber}`;
+      alertMessage = `you can't use this door from ${userCurrentLocation}`;
     }
     alert(alertMessage);
+    return;
   }
 
   close(): void {

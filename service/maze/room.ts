@@ -1,29 +1,40 @@
 import { MapSite } from './map-site'
 
-import { Direction } from './enums/direction'
+import { DirectionString } from './direction'
+
+type Sides = {
+  [direction in DirectionString]: MapSite | null;
+};
 
 export class Room extends MapSite {
   private roomNumber: number;
-  private sides: [];
+  private sides: Sides;
 
   constructor(roomNumber: number) {
     super();
 
     this.roomNumber = roomNumber;
-    this.sides = [];
-    // TODO: set sides?
+    this.sides = {
+      NORTH: null,
+      EAST: null,
+      SOUTH: null,
+      WEST: null,
+    };
   }
 
   enter(): void {
     alert('you are here!');
   }
 
-  // TODO: Return type MapSize
-  getSide(direction: Direction) {
-    // TODO
+  get id(): number {
+    return this.roomNumber;
   }
 
-  setSide(direction: Direction, mapSite: MapSite): void {
-    // TODO
+  getSide(direction: DirectionString): MapSite|null {
+    return this.sides[direction];
+  }
+
+  setSide(direction: DirectionString, mapSite: MapSite): void {
+    this.sides[direction] = mapSite;
   }
 }
