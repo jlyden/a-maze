@@ -1,14 +1,12 @@
 export enum Direction {
-  NORTH,
-  EAST,
-  SOUTH,
-  WEST,
+  NORTH = 'north',
+  EAST = 'east',
+  SOUTH = 'south',
+  WEST = 'west',
 }
 
-export type DirectionString = keyof typeof Direction;
-
 export function separateOneDirectionAtRandom() {
-  const remainder = Object.keys(Direction);
+  const remainder = Object.values(Direction);
   const randomIndex = Math.floor(Math.random() * remainder.length);
   const single = remainder[randomIndex];
   remainder.splice(randomIndex, 1);

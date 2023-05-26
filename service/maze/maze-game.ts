@@ -28,7 +28,6 @@ export class MazeGame {
     return aMaze;
   }
 
-  // TODO: FIXME
   private setWallsAndDoor(room: Room, door: Door): void {
     const {single, remainder} = separateOneDirectionAtRandom();
     room.setSide(single, door);
