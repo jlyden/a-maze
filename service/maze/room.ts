@@ -26,6 +26,10 @@ export class Room extends MapSite {
     alert('you are here!');
   }
 
+  display(): string {
+    return `room ${this.roomNumber} has sides: ${JSON.stringify(this.sides)}`;
+  }
+
   get id(): number {
     return this.roomNumber;
   }

@@ -19,17 +19,23 @@ export class Door extends MapSite {
       return;
     }
 
-    const userCurrentLocation = 0; // TODO: getUserCurrentLocation()
+    const userCurrentLocation = 0; // TODO: getUserLocation()
     const otherSideRoomNumber = this.otherSideFrom(userCurrentLocation);
+
     var alertMessage = '';
+
     if (otherSideRoomNumber) {
       alertMessage = `passed through door to ${otherSideRoomNumber}`;
-      // TODO: actually go through door
+      // TODO: actually go through door, i.e. setUserLocation(otherSideRoomNumber)
     } else {
       alertMessage = `you can't use this door from ${userCurrentLocation}`;
     }
     alert(alertMessage);
     return;
+  }
+
+  display(): string {
+    return `door between room ${this.roomOneNumber} and ${this.roomTwoNumber}, isOpen is ${JSON.stringify(this.isOpen)}`;
   }
 
   close(): void {
