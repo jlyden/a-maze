@@ -1,11 +1,23 @@
+import { Room } from "./room";
+
 export class Maze {
-  private roomNumbers: number[];
+  private rooms: Room[];
 
   constructor() {
-    this.roomNumbers = [];
+    this.rooms = [];
   }
 
-  addRoom(roomNumber: number): void {
-    this.roomNumbers.push(roomNumber);
+  addRoom(room: Room): void {
+    this.rooms.push(room);
+  }
+
+  getRooms(): Room[] {
+    return this.rooms;
+  }
+
+  toString(): void {
+    this.rooms.forEach(room => {
+      room.toString() + '/n';
+    });
   }
 }

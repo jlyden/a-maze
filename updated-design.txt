@@ -1,0 +1,14 @@
+Current Data Structures
+map-site -> sets interface for enter & display methods
+ / change to interface
+ / update all the imports
+door -> knows the rooms it connects and whether open or not
+maze -> knows numbers of rooms that comprise it
+ / switch to rooms
+ / update display to report what rooms look like 
+rooms -> knows its number and its four sides
+wall -> nil (but need class to extend display for special mazes)
+
+add MazeFactory
+ - static getMaze(type, props) { <switch and return new type> }
+update MazeGame

@@ -22,8 +22,8 @@ export class MazeGame {
     this.setWallsAndDoor(roomOne, theDoor);
     this.setWallsAndDoor(roomTwo, theDoor);
 
-    aMaze.addRoom(roomOne.id);
-    aMaze.addRoom(roomTwo.id);
+    aMaze.addRoom(roomOne);
+    aMaze.addRoom(roomTwo);
 
     return aMaze;
   }

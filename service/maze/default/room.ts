@@ -1,18 +1,15 @@
-import { MapSite } from '../map-site'
-
 import { Direction } from '../direction'
+import { MapSite } from '../interfaces/map-site'
 
 type Sides = {
   [direction in Direction]: MapSite | null;
 };
 
-export class Room extends MapSite {
+export class Room implements MapSite {
   private roomNumber: number;
   private sides: Sides;
 
   constructor(roomNumber: number) {
-    super();
-
     this.roomNumber = roomNumber;
     this.sides = {
       [Direction.NORTH]: null,
@@ -43,6 +40,6 @@ export class Room extends MapSite {
   }
 
   toString(): string {
-    return `room ${this.roomNumber}: ${JSON.stringify(this.sides)}`;
+    return this.display();
   }
 }

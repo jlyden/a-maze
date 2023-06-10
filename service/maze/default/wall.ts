@@ -1,6 +1,6 @@
-import { MapSite } from '../map-site'
+import { MapSite } from '../interfaces/map-site'
 
-export class Wall extends MapSite {
+export class Wall implements MapSite {
   enter(): void {
     alert('ouch!');
   }

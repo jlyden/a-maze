@@ -1,13 +1,11 @@
-import { MapSite } from '../map-site'
+import { MapSite } from '../interfaces/map-site'
 
-export class Door extends MapSite {
+export class Door implements MapSite {
   private roomOneNumber: number;
   private roomTwoNumber: number;
   private isOpen: boolean;
 
   constructor(roomOneNumber: number, roomTwoNumber: number) {
-    super();
-
     this.roomOneNumber = roomOneNumber;
     this.roomTwoNumber = roomTwoNumber;
     this.isOpen = false;
@@ -35,7 +33,9 @@ export class Door extends MapSite {
   }
 
   display(): string {
-    return `door between room ${this.roomOneNumber} and ${this.roomTwoNumber}, isOpen is ${JSON.stringify(this.isOpen)}`;
+    const doorStatus = this.isOpen ? 'is' : 'is not';
+
+    return `door between room ${this.roomOneNumber} and ${this.roomTwoNumber} ${doorStatus} open`;
   }
 
   close(): void {

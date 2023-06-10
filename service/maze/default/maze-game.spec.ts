@@ -7,9 +7,9 @@ describe('createMaze', () => {
     mazeGame = new MazeGame();
   })
 
-  it('returns expected values', () => {
-    const expected = {roomNumbers: [1,2]};
-    const result = mazeGame.createMaze();
-    expect(result).toEqual(expected);
+  it('creates maze with two rooms', () => {
+    const testMaze = mazeGame.createMaze();
+    const testMazeRooms = testMaze.getRooms();
+    expect(testMazeRooms).toHaveLength(2);
   })
 })
