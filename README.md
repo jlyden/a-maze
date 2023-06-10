@@ -5,11 +5,7 @@ This is a lightly edited (so far) [Next.js](https://nextjs.org/) project bootstr
 First, run the development server:
 
 ```bash
-npm run dev
-# or
 yarn dev
-# or
-pnpm dev
 ```
 
 Result at [http://localhost:3000](http://localhost:3000) in browser.

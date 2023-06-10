@@ -1,4 +1,4 @@
-import { separateOneDirectionAtRandom } from './direction'
+import { separateOneDirectionAtRandom } from '../direction'
 
 import { Door } from "./door";
 import { Maze } from "./maze";
@@ -40,11 +40,11 @@ export class MazeGame {
     return new Maze();
   }
 
-  private makeRoom(roomNumber: number): Room {
+  protected makeRoom(roomNumber: number): Room {
     return new Room(roomNumber);
   }
 
-  private makeWall(): Wall {
+  protected makeWall(): Wall {
     return new Wall();
   }
 

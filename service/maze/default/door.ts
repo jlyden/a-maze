@@ -1,4 +1,4 @@
-import { MapSite } from './map-site'
+import { MapSite } from '../map-site'
 
 export class Door extends MapSite {
   private roomOneNumber: number;

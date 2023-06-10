@@ -1,6 +1,6 @@
-import { MapSite } from './map-site'
+import { MapSite } from '../map-site'
 
-import { Direction } from './direction'
+import { Direction } from '../direction'
 
 type Sides = {
   [direction in Direction]: MapSite | null;
@@ -15,15 +15,15 @@ export class Room extends MapSite {
 
     this.roomNumber = roomNumber;
     this.sides = {
-      north: null,
-      east: null,
-      south: null,
-      west: null,
+      [Direction.NORTH]: null,
+      [Direction.EAST]: null,
+      [Direction.SOUTH]: null,
+      [Direction.WEST]: null,
     };
   }
 
   enter(): void {
-    alert('you are here!');
+    alert(`you have entered room number: ${this.id}`);
   }
 
   display(): string {
@@ -40,5 +40,9 @@ export class Room extends MapSite {
 
   setSide(direction: Direction, mapSite: MapSite): void {
     this.sides[direction] = mapSite;
+  }
+
+  toString(): string {
+    return `room ${this.roomNumber}: ${JSON.stringify(this.sides)}`;
   }
 }
