@@ -1,4 +1,3 @@
-import { assert } from 'console';
 import { Direction, separateOneDirectionAtRandom } from './direction'
 
 const directions = Object.values(Direction);
