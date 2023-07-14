@@ -10,6 +10,12 @@ yarn dev
 
 Result at [http://localhost:3000](http://localhost:3000) in browser.
 
+## Upgrade Dependencies
+
+```bash
+yarn upgrade --latest
+```
+
 ## Context
 
 Working on building Mazes inspired by [Design Patterns](https://learning.oreilly.com/library/view/design-patterns-elements/0201633612/ch03.html) (Gamma, Helm, Johnson & Vlissides)
